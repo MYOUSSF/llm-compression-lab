@@ -1,0 +1,34 @@
+# llm-compression-lab requirements
+# Pinned for Kaggle T4 (CUDA 11.8, Python 3.10)
+# Install: pip install -r requirements.txt
+
+# Core
+torch>=2.1.0
+torchvision>=0.16.0
+
+# HuggingFace stack
+transformers>=4.38.0
+datasets>=2.18.0
+peft>=0.9.0                  # LoRA / QLoRA adapters
+accelerate>=0.27.0           # multi-GPU and mixed-precision training
+tokenizers>=0.15.0
+
+# Quantization
+bitsandbytes>=0.43.0         # INT4 NF4 weight-only quantization (QLoRA)
+torchao>=0.1.0               # torch.ao modern quantization API (replaces deprecated torch.quantization)
+
+# ONNX export + inference benchmarking
+onnx>=1.15.0
+onnxruntime>=1.17.0          # CPU inference runtime
+optimum>=1.17.0              # HuggingFace → ONNX export helpers
+
+# Data + numerics
+numpy>=1.24.0
+pandas>=2.0.0
+scipy>=1.11.0
+
+# Visualization
+matplotlib>=3.7.0
+
+# Utilities
+tqdm>=4.66.0
